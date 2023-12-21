@@ -1,0 +1,144 @@
+.main-container {
+    margin-top: var(--navbar-height);
+}
+
+.camera-section-container {
+    width: 100%;
+    padding: 30px 50px 0 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+}
+.camera-and-controls-container {
+    box-sizing: border-box;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+
+    gap: 50px;
+    padding: 10px 50px;
+}
+
+.camera-container {
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+
+    border: 1px solid var(--lines-color);
+}
+
+.controls-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.controls-buttons-container {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.controls-buttons-container button{
+    width: 70px;
+    height: 70px;
+
+    border: 1px solid var(--lines-color2);
+    outline: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    background-color: transparent;
+
+    transition: all 0.2s ease;
+}
+.controls-buttons-container button svg{
+    fill: var(--lines-color2);
+    transition: all 0.2s ease;
+}
+.controls-buttons-container button:hover{
+    background-color: var(--lines-color2);
+}
+.controls-buttons-container button:hover svg {
+    fill: var(--white);
+}
+
+
+.code-text-container {
+    background-color: #2b2b2b;
+    color: #ffffff;
+
+    border-radius: 8px;
+    overflow: auto;
+
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+
+    display: flex;
+    align-items: center;
+
+    max-width: 600px;
+    width: 100%;
+}
+
+.code-text-container::-webkit-scrollbar {
+    height: 10px;
+}
+
+  /* Track */
+.code-text-container::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.15);
+    border-radius: 50px;
+	margin-bottom: 5px;
+}
+
+  /* Handle */
+.code-text-container::-webkit-scrollbar-thumb {
+    background: #818181;
+    border-radius: 10px;
+}
+
+  /* Handle on hover */
+.code-text-container::-webkit-scrollbar-thumb:hover {
+    background: #BBBBBB;
+}
+
+
+@media (max-width: 1100px) {
+    .camera-and-controls-container {
+        grid-template-columns: 1fr;
+        padding: 10px 100px;
+    }
+    .code-text-container {
+        max-width: 650px;
+    }
+}
+@media (max-width: 750px) {
+    .code-text-container {
+        max-width: 500px;
+    }
+}
+@media (max-width: 600px) {
+    .code-text-container {
+        max-width: 400px;
+    }
+}
+@media (max-width: 500px) {
+    .code-text-container {
+        max-width: 300px;
+    }
+}
